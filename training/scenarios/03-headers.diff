@@ -1,0 +1,3 @@
+# Training-only patch: remove helmet() middleware.
+# Apply only on a dedicated pull-request branch.
+# OWASP ZAP should identify the missing security headers.

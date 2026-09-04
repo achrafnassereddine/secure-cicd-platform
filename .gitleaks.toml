@@ -1,0 +1,9 @@
+title = "secure-cicd-platform gitleaks policy"
+
+[allowlist]
+description = "Training-safe placeholders that are not credentials"
+paths = [
+  '''README.md''',
+  '''docs/.*''',
+  '''training/.*'''
+]

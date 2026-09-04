@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    image: secure-cicd-platform:ci
+    environment:
+      PORT: 3000
+      JWT_SECRET: change-me-in-github-actions-only-do-not-use-in-production
+    ports:
+      - "127.0.0.1:3000:3000"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped

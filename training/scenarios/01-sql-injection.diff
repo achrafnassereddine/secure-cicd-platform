@@ -1,0 +1,3 @@
+# Training-only patch: introduce SQL concatenation in /api/search.
+# Apply only on a dedicated pull-request branch.
+# The intended outcome is for SAST/security review to detect the regression.

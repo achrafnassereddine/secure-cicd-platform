@@ -1,0 +1,3 @@
+# Training-only patch: remove the owner_id predicate from /api/documents/:id.
+# Apply only on a dedicated pull-request branch.
+# The existing authorization regression test should fail.
