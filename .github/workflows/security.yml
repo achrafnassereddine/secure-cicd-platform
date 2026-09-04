@@ -64,9 +64,9 @@ jobs:
         with:
           node-version: 24
           package-manager-cache: false
-      - run: npm install
+      - run: npm ci
       - run: mkdir -p artifacts
-      - run: npx --yes cyclonedx-npm --output-file artifacts/sbom.json --output-format json
+      - run: npm run sbom
       - uses: actions/upload-artifact@v6
         with:
           name: sbom
